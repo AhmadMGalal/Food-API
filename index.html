@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body class="bg-black min-vh-100">
+    <!-- !side nav section -->
+    <section
+      class="sideNav-section vh-100 w-20 position-fixed top-0 bg-danger z-3">
+      <div class="sidenav">
+        <div class="container">
+          <div class="row">
+            <div
+              id="nav-menu"
+              class="col-9 bg-black vh-100 text-white py-3 d-flex flex-column justify-content-between">
+              <ul
+                id="nav-ul"
+                class="list-unstyled d-flex flex-column m-pointer">
+                <li id="search-btn" class="my-2">Search</li>
+                <li id="category-btn" class="my-2">Categories</li>
+                <li id="area-btn" class="my-2">Area</li>
+                <li id="ingredient-btn" class="my-2">Ingredients</li>
+                <li id="contactUs-btn" class="my-2">Contact Us</li>
+              </ul>
+              <footer>
+                <div class="site d-flex m-2 m-pointer">
+                  <i class="fab fa-facebook me-2"></i>
+                  <i class="fab fa-twitter me-2"></i>
+                  <i class="fas fa-globe"></i>
+                </div>
+                <p>Copyright Â© 2019 All Rights Reserved.</p>
+              </footer>
+            </div>
+            <div
+              class="col-3 bg-white vh-100 text-center py-3 d-flex flex-column justify-content-between">
+              <img class="w-100" src="imgs/logo.png" alt="" />
+              <i id="open-nav" class="fa-solid fa-bars fa-3x m-pointer"></i>
+              <i
+                id="close-nav"
+                class="d-none fa-solid fa-xmark fa-3x m-pointer"></i>
+              <div class="site d-flex flex-column">
+                <i class="fas fa-globe m-pointer mb-2"></i>
+                <i class="fas fa-share-nodes m-pointer"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ! home section -->
+    <section class="home-section my-5">
+      <div class="container">
+        <div id="home-meals" class="row g-4"></div>
+      </div>
+    </section>
+    <!-- ! search section -->
+    <section class="search-section my-5 d-none">
+      <div class="container text-center">
+        <form action="">
+          <div class="row g-4">
+            <div class="col-md-6 mb-2">
+              <input
+                id="search-by-name"
+                class="form-control mb-2"
+                type="text"
+                value=""
+                placeholder="search By Name" />
+            </div>
+            <div class="col-md-6 mb-2">
+              <input
+                id="search-by-FLetter"
+                class="form-control mb-2"
+                type="text"
+                value=""
+                placeholder="search By First Letter" />
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="container">
+        <div id="search-meals" class="row g-4"></div>
+      </div>
+    </section>
+    <!-- ! category section -->
+    <section class="category-section my-5 d-none">
+      <div class="container">
+        <div id="category-list" class="row g-4"></div>
+      </div>
+    </section>
+    <!-- ! category meals section -->
+    <section class="category-meals-section my-5 d-none">
+      <div class="container">
+        <div id="cat-meals" class="row g-4"></div>
+      </div>
+    </section>
+    <!-- ! area section -->
+    <section class="area-section my-5 d-none">
+      <div class="container">
+        <div id="area-list" class="row g-4"></div>
+      </div>
+    </section>
+    <!-- ! area meals section -->
+    <section class="area-meals-section my-5 d-none">
+      <div class="container">
+        <div id="area-meals" class="row g-4"></div>
+      </div>
+    </section>
+    <!-- ! ingredients section -->
+    <section class="ingredient-section my-5 d-none">
+      <div class="container">
+        <div id="ingerdient-list" class="row g-4"></div>
+      </div>
+    </section>
+
+    <!-- ! ingredient meals section -->
+
+    <section class="ingredient-meals-section my-5 d-none">
+      <div class="container">
+        <div id="ingredient-meals" class="row g-4"></div>
+      </div>
+    </section>
+
+    <!-- ! details section -->
+    <section class="meal-details-section my-5 text-white d-none">
+      <div class="container">
+        <div id="meal-detail" class="row meal-detail"></div>
+      </div>
+    </section>
+    <!-- ! Contact us Section -->
+    <section
+      class="contact-us-section min-vh-100 d-flex align-items-center justify-content-center d-none">
+      <div class="container text-center">
+        <form action="">
+          <div class="row g-4 mb-4">
+            <div class="col-md-6">
+              <input
+                id="userName"
+                class="form-control mb-2"
+                value=""
+                name="username"
+                type="text"
+                placeholder="Enter Your Name" />
+              <div
+                id="nameAlert"
+                class="alert alert-danger d-none"
+                role="alert">
+                Special characters and numbers not allowed
+              </div>
+            </div>
+            <div class="col-md-6">
+              <input
+                id="useremail"
+                class="form-control mb-2"
+                value=""
+                name="useremail"
+                type="email"
+                placeholder="Enter Your Email" />
+              <div
+                id="emailAlert"
+                class="alert alert-danger d-none"
+                role="alert">
+                Email not valid *exemple@yyy.zzz
+              </div>
+            </div>
+            <div class="col-md-6">
+              <input
+                id="usernumber"
+                class="form-control mb-2"
+                value=""
+                name="usernumber"
+                type="text"
+                placeholder="Enter Your Number" />
+              <div
+                id="numberAlert"
+                class="alert alert-danger d-none"
+                role="alert">
+                Enter valid Phone Number
+              </div>
+            </div>
+            <div class="col-md-6">
+              <input
+                id="userAge"
+                class="form-control mb-2"
+                value=""
+                name="userage"
+                type="number"
+                placeholder="Enter Your Age" />
+              <div id="ageAlert" class="alert alert-danger d-none" role="alert">
+                A simple danger alert—check it out!
+              </div>
+            </div>
+            <div class="col-md-6">
+              <input
+                id="userPass"
+                class="form-control mb-2"
+                value=""
+                name="userpass"
+                type="password"
+                placeholder="Enter Your Password" />
+              <div
+                id="passAlert"
+                class="alert alert-danger d-none"
+                role="alert">
+                Enter valid password *Minimum eight characters, at least one
+                letter and one number:*
+              </div>
+            </div>
+            <div class="col-md-6">
+              <input
+                id="repass"
+                class="form-control mb-2"
+                value=""
+                name="repass"
+                type="password"
+                placeholder="Repassword" />
+              <div
+                id="repassAlert"
+                class="alert alert-danger d-none"
+                role="alert">
+                Enter valid repassword should be the same as password
+              </div>
+            </div>
+          </div>
+          <button id="contactBtn" class="btn btn-outline-danger" type="submit">
+            Submit
+          </button>
+        </form>
+      </div>
+    </section>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"></script>
+    <script src="js/index.js" type="module"></script>
+  </body>
+</html>
